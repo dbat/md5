@@ -1,12 +1,24 @@
 # md5
 Tiny, fast, versatile md5 asm lib (source code, sample and helper)
 
-Also included this functional sample (see source code), EXE as tiny as 7KB (compressed), with the capabitlity as below:
+By the fast means 750 MB/s in i5-3570K 3.4GHz (memory test only, our mechanical hard disks couldn't even keep up with it).
 
-And it's quite fast, 750 MB/s in i5-3570K 3.4GHz (memory test only, our mechanical hard disks couldn't even keep up with it).
+  -  For advance users MDX5A.ASM is all you need, it's written to be able to be compiled directly by both MASM and TASM. Please read the fairly extensive documentation within the sourecode.asm itself.
 
-md5 ?
- 
+  -  Regular users might get all source codes:
+
+    - mdx5a.asm: core library
+    - md5.c: sample implementation in C
+    - COMPILE1.BAT: test compilation with TASM and MASM, and build DLL
+    - COMPILE2.BAT: compile sample code with TinyC
+    
+  -  Novice users who don't want to be bothered with compiling, might just get these tiny compiled binaries:
+     md5.exe (7KB) and md5a.dll (4KB)    
+
+
+    md5 ?
+  
+
     Copyright (c) 2003-2009
     Adrian H, Ray AF & Raisa NF of PT SOFTINDO, Jakarta
  
@@ -14,11 +26,11 @@ md5 ?
     https://github.com/dbat/md5
  
 
- SYNOPSYS:
+    SYNOPSYS:
  
         Calculate MD5 of files/wildcards or std input
 
- USAGE:
+    USAGE:
  
         md5 [ OPTIONS ] [ filenames/wildcards ]...
 
@@ -37,7 +49,7 @@ md5 ?
         -h      : Also help
         -t      : Test CPU speed for calculating MD5
 
- NOTES:
+    NOTES:
  
         OPTIONS can be specified by DASH (-) or SLASH (/)
         They are NOT case-sensitive, eg. /x equal with /X
@@ -47,7 +59,7 @@ md5 ?
 
         If no filename has given, it will be fed from stdin
 
- EXAMPLES:
+    EXAMPLES:
  
         md5 -z /S *.exe "%windir%\system32\*.sys" \*.txt
 
